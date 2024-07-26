@@ -20,5 +20,7 @@ To install the application follow this process:
 docker build finance-portal . 
 docker run -d -p 8080:8080 finance-portal
 ```
+4) The application will be publisher on port 8080 but you can change it in the docker-compose.yml file or in the docker run command.
 
-The application will be publisher on port 8080 but you can change it in the docker-compose.yml file or in the docker run command. 
+
+Now just point the publisher to your application and publish it via NPA or BA. 
