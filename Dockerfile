@@ -12,6 +12,9 @@ RUN mkdir -p /var/www/html/uploads && \
     chown -R www-data:www-data /var/www/html/uploads && \
     chmod -R 755 /var/www/html/uploads
 
+# Set ServerName to localhost to suppress the warning
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
 # Expose port 8080
 EXPOSE 8080
 
