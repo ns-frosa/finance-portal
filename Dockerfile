@@ -7,8 +7,9 @@ WORKDIR /var/www/html
 # Copy the application files to the container
 COPY app/ /var/www/html/
 
-# Set permissions for the uploads directory
-RUN chown -R www-data:www-data /var/www/html/uploads && \
+# Ensure the uploads directory exists and set permissions
+RUN mkdir -p /var/www/html/uploads && \
+    chown -R www-data:www-data /var/www/html/uploads && \
     chmod -R 755 /var/www/html/uploads
 
 # Expose port 8080
